@@ -1,14 +1,14 @@
 //alert banner + click event listener on close button
 
-const alert = document.getElementById("alert");
+const alertBox = document.getElementById("alert");
 
-alert.innerHTML = " <div class='alert-banner'>  <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'>x</p> </div> "
+alertBox.innerHTML = " <div class='alert-banner'>  <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'>x</p> </div> "
 
-alert.addEventListener("click", e => {
+alertBox.addEventListener("click", e => {
   const element = e.target
 
   if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none"
+    alertBox.style.display = "none"
   }
 
 })
@@ -134,6 +134,6 @@ send.addEventListener('click', () => {
   } else if (message.value === "" ) {
     alert("Please fill out message field before sending");
   } else {
-    alert("Message successfully sent to: ${user.value}");
+    alert("Message successfully sent!");
   }
 });
